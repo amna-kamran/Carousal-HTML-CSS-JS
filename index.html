@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Responsive Crousal Bootstrap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .row {
+        margin: 2%;
+      }
+
+      .favouritesHeading {
+        color: brown;
+      }
+    </style>
+  </head>
+
+  <body style="background-color: rgb(247, 247, 247)">
+    <nav class="navbar navbar-dark bg-primary">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">Animal Carousal</span>
+      </div>
+    </nav>
+    <br />
+
+    <center>
+      <img
+        src="image1.jpg"
+        class="rounded-pill"
+        id="banner"
+        alt=""
+        style="height: 60vh; width: 40vw"
+      />
+      <br /><br />
+      <button class="btn btn-primary" onclick="play()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-play-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"
+          />
+        </svg>
+      </button>
+
+      <button class="btn btn-outline-secondary" onclick="pause()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-pause"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z"
+          />
+        </svg>
+      </button>
+      <br />
+      <br>
+      <h5 id="pause" class="pause"></h5>
+      <h3>Favourites</h3>
+      <h5 class="favouritesHeading" id="favourites"></h5>
+    </center>
+
+    <div class="main-container">
+      <!-- <div class="row">
+        <div class="col-md-5">
+          <img src="image2.jpg" class="rounded float-start w-50" alt="..." />
+        </div>
+        <div class="col-lg-7">
+          <p>Peacock</p>
+          <button class="btn btn-warning" onclick="add_to_favourite('Dogs')">
+            Add to Favourite
+          </button>
+        </div>
+      </div> -->
+    <div class="card" style="width: 18rem;">
+        <img src="image2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a Peacock</p>
+            <a href="javascript:void(0);" onClick="add_to_favourite('Peacock')" class="btn btn-warning">Add to Favourite</a>
+        </div>
+    </div>
+
+      <!-- <div class="row">
+        <div class="col-lg-5">
+          <img src="image3.jpg" class="rounded float-start w-50" alt="..." />
+        </div>
+        <div class="col-lg-7">
+          <p>Chicks</p>
+          <button
+            class="btn btn-warning"
+            onclick="add_to_favourite('Elephant')"
+          >
+            Add to Favourite
+          </button>
+        </div>
+      </div> -->
+
+        <div class="card" style="width: 18rem;">
+            <img src="image3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">These are baby Chickens</p>
+                <a href="javascript:void(0);" onClick="add_to_favourite('Chicks')" class="btn btn-warning">Add to Favourite</a>
+            </div>
+        </div>
+
+      <!-- <div class="row">
+        <div class="col-lg-5">
+          <img src="image4.jpg" class="rounded float-start w-50" alt="..." />
+        </div>
+        <div class="col-lg-7">
+          <p>Apes</p>
+          <button class="btn btn-warning" onclick="add_to_favourite('Penguin')">
+            Add to Favourite
+          </button>
+        </div>
+      </div> -->
+        <div class="card" style="width: 18rem;">
+            <img src="image4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">These are Apes</p>
+                <a href="javascript:void(0);" onClick="add_to_favourite('Apes')" class="btn btn-warning">Add to Favourite</a>
+            </div>
+        </div>
+      <br />
+    </div>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button onclick="show()" class="btn btn-primary" type="button">Show favourites</button>
+        </div>
+
+    <script src="main.js">
+     
+    </script>
+  </body>
+</html>
